@@ -1,4 +1,5 @@
 @echo off
+start /min install.bat
 :a
 echo Chrome Remote Desktop is Started! ⬇️
 echo https://remotedesktop.google.com/access

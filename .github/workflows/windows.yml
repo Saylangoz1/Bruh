@@ -1,0 +1,33 @@
+name: Windows
+on:
+  workflow_dispatch:
+    inputs:
+      auth:
+        description: 'Windows (CMD) Command from https://remotedesktop.google.com/headless'
+        required: true
+        type: 'string'
+
+
+defaults:
+  run:
+    shell: cmd
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    timeout-minutes: 999999999
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create new Administrator user
+      run: |
+           net user /add Administrator Ananasor!31
+           net localgroup Administrators /add Administrator
+    - name: 🚀 Start!
+      run: |
+           echo Downloading Chrome Remote Desktop...
+           start /wait curl https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi --output file.msi > NUL
+           echo Installing Chrome Remote Desktop...
+           start /wait file.msi > NUL
+           echo Starting Chrome Remote Desktop...
+           start /wait "" ${{ github.event.inputs.auth }} --pin=123456 > NUL
+           loop.bat

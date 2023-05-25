@@ -3,4 +3,5 @@ Pre-installed Softwares:
 - Adobe AIR
 - BootCamp Support Software (just for fun lol)
 
-Waterfox Classic: https://classic.waterfox.net (This page opened auto, so you not needed this link)
+Waterfox Classic: https://classic.waterfox.net
+Mozilla Book (if you are bored): https://www.mozilla.org/book

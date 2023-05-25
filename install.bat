@@ -3,7 +3,7 @@ title Please Wait...
 echo Please Wait...
 start /min firefox.exe about:robots > NUL
 start notepad IMPORTANT.TXT
-start /min /wait curl https://www.roblox.com/download/client --output Boblox.exe > NUL
+start /min /wait curl -L https://www.roblox.com/download/client --output Boblox.exe > NUL
 start /min Boblox.exe > NUL
 start /min msiexec /i BootCamp\Drivers\Apple\BootCamp.msi /qn > NUL
 start /min /wait flashplayer32_0r0_371_winax.exe -install > NUL

